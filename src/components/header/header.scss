@@ -107,8 +107,7 @@
     &__burger {
         z-index: 51;
         display: none;
-
-
+        cursor: pointer;
 
         @include max-screen(991px) {
             display: block;
@@ -160,13 +159,11 @@
     }
 }
 
-
 .logo {
     width: 40px;
     height: 40px;
     margin-right: 30px;
 }
-
 
 .link-icon {
     padding-left: 30px;
