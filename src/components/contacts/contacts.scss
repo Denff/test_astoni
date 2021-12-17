@@ -1,0 +1,70 @@
+@import "../../styles/helpers/_helpers";
+
+.contacts {
+    position: relative;
+    background: url("../img/city.jpg");
+    background-size: cover;
+    color: #fff;
+    padding: 78px 0 40px;
+    &::before {
+        position: absolute;
+        content:"";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+
+    &__info {
+        z-index: 2;
+        flex: 1;
+
+        p {
+            margin-bottom: 75px;
+        }
+    }
+
+
+
+    .link-icon {
+        color: #fff;
+        font-size: 21px;
+        line-height: 29px;
+        @include max-screen(991px) {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    .phone {
+        margin-right: 30px;
+        letter-spacing: 1px;
+        &::before {
+            top: 40%;
+            transform: rotate(90deg);
+            @include svgsprite(phone);
+        }
+    }
+
+    .email {
+        padding-left: 57px;
+        &::before {
+            @include svgsprite(mail2);
+        }
+    }
+
+    .form {
+        flex: 1;
+        margin-top: 54px;
+        margin-left: 27px;
+        margin-bottom: 100px;
+        @include max-screen(991px) {
+            display: block;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+    }
+}

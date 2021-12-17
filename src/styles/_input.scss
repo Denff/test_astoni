@@ -1,0 +1,80 @@
+::-webkit-input-placeholder {
+    opacity: 0.5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+::-moz-placeholder {
+    opacity: 0.5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+:-moz-placeholder {
+    opacity: 0.5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+:-ms-input-placeholder {
+    opacity: 0.5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    border: none;
+    width: 100%;
+    padding: 7px 0px 8px;
+    // color: $color2;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    color: #fff;
+    font-family: "Lato";
+    font-size: map-get($fontSize, input);
+    line-height: 29px;
+    box-shadow: none;
+    // border: 1px solid $color2;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    @include placeholder() { opacity: 0.5; color: #fff; font-weight: 300;}
+    // &:hover {
+        // border-color: $color1;
+    // }
+    &:focus {
+        // border-color: $color1;
+        @include placeholder() {
+            opacity: 0;
+        }
+        outline: none;
+    }
+}
+textarea {
+    resize: none;
+}
+input[type="submit"] {
+    outline: none;
+}
+
+label {
+    font-size: 16px;
+    line-height: 22px;
+}

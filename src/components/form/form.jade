@@ -1,0 +1,14 @@
++b.FORM.form
+    +e.fields 
+        +e.group 
+            label(for="") Имя
+            input(type="text" placeholder="Иван" required).name
+        +e.group 
+            label(for="") Фамилия
+            input(type="text" placeholder="Иванов" required).surname
+    +e.group
+        label(for="") Сообщение
+        textarea(name="", cols="30", rows="3" placeholder="Ваше сообщение" required="required").message
+    +e.actions 
+        input(type="submit", value="Отправить сообщение").btn.btn_primary
+

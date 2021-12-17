@@ -1,0 +1,42 @@
+@import "../../styles/helpers/_helpers";
+
+.nav {
+    z-index: 50;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+    @include max-screen(991px) {
+        z-index: 33;
+        position: fixed;
+        top: calc(-100% - 110px);
+        left: 0;
+        background-color: #ccc;
+        padding: 120px 15px 15px;
+        width: 100%;
+        height: 100%;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        transition:  0.3s all;
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: #222222;
+        border-color: transparent;
+        text-transform: uppercase;
+        padding: 12px;
+
+        @include max-screen(991px)  {
+            padding: 25px 20px;
+        }
+    }
+
+}
+.nav.active {
+    top: 0;
+}

@@ -1,0 +1,31 @@
+extends layout/default
+
+block variables
+    - const title = "Главная";
+    - const description = '';
+    - const keywords = '';
+    - const pageClass = '';
+
+block styles
+    //- +style("http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
+    +style('https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.css')
+    +style('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+    +style('css/common.min.css')   
+    +style('css/styles.min.css')   
+
+block scripts
+    +script('https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js')
+    //- +script('https://cdn.jsdelivr.net/npm/jquery-once@2.2.0/jquery.once.min.js')
+    //- +script("https://code.jquery.com/ui/1.11.4/jquery-ui.min.js")
+    +script('https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js')
+    +script('https://cdn.jsdelivr.net/npm/inputmask/dist/min/jquery.inputmask.bundle.min.js')
+    +script('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
+    +script('js/theme.min.js')
+
+block content
+    +b.wrapper
+        include ../components/header/header
+        include ../components/main-slider/main-slider
+        include ../components/contacts/contacts
+        include ../components/footer/footer
+        .hidden-overley

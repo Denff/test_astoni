@@ -1,0 +1,49 @@
+@import "../../styles/helpers/_helpers";
+
+.form {
+    z-index: 5;
+
+    &__fields {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        @include max-screen(991px) {
+            flex-flow: column nowrap;
+        }
+    }
+    &__actions {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        margin-top: 50px;
+        @include max-screen(991px) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.form__fields {
+    .form__group {
+        flex: 0 0 auto;
+        width: 255px;
+        @include max-screen(1199px) {
+            width: 215px;
+        }
+        @include max-screen(991px) {
+            width: 270px;
+            margin-bottom: 32px;
+        }
+    }
+    .form__group:last-child {
+        @include max-screen(991px) {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.form__group {
+    @include max-screen(991px) {
+        width: 270px;
+    }
+}

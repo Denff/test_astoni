@@ -1,0 +1,123 @@
+@import "../../styles/helpers/_helpers";
+
+.main-slider {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    color: #ffffff;
+    margin-bottom: 3px;
+
+    .bg-img {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+    }
+    h2 {
+        margin-top: 15%;
+        margin-bottom: 80px;
+        font-size: 48px;
+        font-family: "Merriweather";
+        line-height: 135%;
+    }
+    .btn {
+        margin-bottom: 30%;
+    }
+}
+
+.slider {
+    position: relative;
+    &__item {
+        position: relative;
+        height: 670px;
+        background: url("../img/city.jpg");
+        &::before {
+            z-index: 0;
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+    &__dots {
+        z-index: 10;
+        padding: 0;
+        display: flex !important;
+        justify-content: flex-start;
+
+        @include max-screen(991px) {
+            justify-content: center;
+        }
+        li {
+            list-style: none;
+            margin-right: 40px;
+            &::before {
+                display: none;
+            }
+
+            button {
+                height: 10px;
+                width: 10px;
+                text-indent: -99999px;
+                background-color: rgba(255, 255, 255, 0.4);
+                border-color: transparent;
+                outline: none;
+                border-radius: 100%;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+            }
+        }
+        li.slick-active {
+            button {
+                background-color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+    &__arrows {
+        z-index: 40;
+        position: absolute;
+        right: 0;
+        top:0;
+        display: flex;
+        flex-flow: row nowrap;
+        @include max-screen(991px) {
+            display: none;
+        }
+    }
+
+    &__arrow-prev,
+    &__arrow-next {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+.slick-arrow {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slick-arrow.slick-disabled {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+.arrows-dots {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+}
